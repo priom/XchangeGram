@@ -1,20 +1,22 @@
 <%= simple_form_for @pic, html: { multipart: true } do |f| %>
     <% if @pic.errors.any? %>
-        <h3><%=	pluralize(@pic.errors.count, "error") %></h3>
-        <ul>
-          <% @pic.errors.full_message.each do |msg|%>
-            <li><%=	msg %></li>
-          <% end %>
-        </ul>
+        <div class="alert alert-danger">
+          <h3><%= pluralize(@pic.errors.count, 'error') %> stopped from posting.</h3>
+          <ul>
+            <%= @pic.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
     <% end %>
 
     <div class="form-group">
-      <%=	f.input :title, input_html: { class: 'form-control' } %>
+      <%=	f.input :title, class: 'form-control', required: true %>
     </div>
 
     <div class="form-group">
-      <%=	f.input :description, input_html: { class: 'form-control' } %>
+      <%=	f.input :description, class: 'form-control' %>
     </div>
 
-    <%=	f.button :submit, class: "btn btn-success" %>
+    <%=	f.button :submit, class: 'btn btn-success' %>
 <% end %>
