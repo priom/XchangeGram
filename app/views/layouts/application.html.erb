@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Xchangegram</title>
+    <title>XchangeGram</title>
     <%= csrf_meta_tags %>
 
     <%= favicon_link_tag 'favicon.ico' %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
 
   <body>
+    <%=	render 'layouts/header' %>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
     <div class="container">
-      <%= yield %>
+      <div class="col-md-8 col-md-offset-2">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>
