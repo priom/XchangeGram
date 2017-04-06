@@ -1,4 +1,5 @@
 class PicsController < ApplicationController
+  protect_from_forgery
   before_action :find_pic, only: [:show, :edit, :update, :destroy]
 
   def index
