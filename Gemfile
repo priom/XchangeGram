@@ -25,8 +25,8 @@ gem 'devise', '~> 4.2', '>= 4.2.1'
 gem 'devise-bootstrap-views', '~> 0.0.11'
 gem 'simple_form', '~> 3.4'
 gem 'devise', '~> 4.2', '>= 4.2.1'
-# gem 'carrierwave', '~> 1.0'
-# gem 'cloudinary', '~> 1.6'
+gem 'carrierwave', '~> 1.0'
+gem 'cloudinary', '~> 1.6'
 
 # gem 'capistrano-rails', group: :development
 
